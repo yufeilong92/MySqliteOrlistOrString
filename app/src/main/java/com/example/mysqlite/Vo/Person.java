@@ -1,8 +1,6 @@
 package com.example.mysqlite.Vo;
 
-import io.realm.RealmList;
 import io.realm.RealmObject;
-import io.realm.annotations.PrimaryKey;
 
 /**
  * @version V 1.0 xxxxxxxx
@@ -15,17 +13,16 @@ import io.realm.annotations.PrimaryKey;
  * @Copyright: 2018
  */
 public class Person extends RealmObject {
-    @PrimaryKey
-    private long id;
-    private String name;
-    private RealmList<Dog> dogs;
 
-    public long getId() {
-        return id;
+    private String name;
+    private String title;
+
+    public String getTitle() {
+        return title;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getName() {
@@ -36,11 +33,4 @@ public class Person extends RealmObject {
         this.name = name;
     }
 
-    public RealmList<Dog> getDogs() {
-        return dogs;
-    }
-
-    public void setDogs(RealmList<Dog> dogs) {
-        this.dogs = dogs;
-    }
 }

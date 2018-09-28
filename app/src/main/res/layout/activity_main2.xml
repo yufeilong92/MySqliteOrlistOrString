@@ -5,61 +5,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".Main2Activity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
-
+        android:fillViewport="false">
         <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/btn_startIntent"
-                android:layout_width="match_parent"
-                android:textAllCaps="false"
-                android:layout_height="wrap_content"
-                android:text="Start_Main2Activity" />
+            android:layout_height="match_parent">
 
 
             <Button
-                android:id="@+id/btn_add"
+                android:id="@+id/btn_add_object"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="add"
+                android:text="add_Object"
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/btn_delect"
+                android:id="@+id/btn_add_Arraylist"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="delectAll"
-                android:textAllCaps="false" />
-
-            <Button
-                android:id="@+id/btn_updata"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="updata"
-                android:textAllCaps="false" />
-
-            <Button
-                android:id="@+id/btn_delect_one"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="delect_one"
+                android:text="add_Arraylist"
                 android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/btn_find"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="find"
+                android:text="find_Object"
                 android:textAllCaps="false" />
 
+            <Button
+                android:id="@+id/btn_find_Arraylist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="find_Arraylist"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_delectAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="delect_All"
+                android:textAllCaps="false" />
 
             <TextView
                 android:id="@+id/tv_data"
@@ -67,5 +58,6 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="20dp" />
         </LinearLayout>
+
     </ScrollView>
 </LinearLayout>

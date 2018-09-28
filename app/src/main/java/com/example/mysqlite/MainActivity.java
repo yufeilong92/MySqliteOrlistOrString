@@ -1,19 +1,14 @@
 package com.example.mysqlite;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.mysqlite.Utils.SerializableUtil;
 import com.example.mysqlite.Vo.Dog;
-import com.example.mysqlite.Vo.SelectVideoFGVo;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
@@ -26,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnDelectOne;
     private Button mBtnFind;
     private TextView mTvData;
+    private Button mBtnStartIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +44,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnFind = (Button) findViewById(R.id.btn_find);
         mBtnFind.setOnClickListener(this);
         mTvData = (TextView) findViewById(R.id.tv_data);
+        mBtnStartIntent = (Button) findViewById(R.id.btn_startIntent);
+        mBtnStartIntent.setOnClickListener(this);
     }
 
     @SuppressLint("LongLogTag")
@@ -57,24 +55,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_add:
                 Realm realm = Realm.getDefaultInstance();
                 realm.beginTransaction();
-                final Dog dogs = realm.createObject(Dog.class);
-                int a = 10;
-                ArrayList<SelectVideoFGVo> vos = new ArrayList<>();
-                for (int i = 0; i < a; i++) {
-                    SelectVideoFGVo vo = new SelectVideoFGVo();
-                    vo.setData("你好");
-                    vo.setId("21");
-                    vo.setName("小红");
-                    vos.add(vo);
-                }
-                try {
-                    String s = SerializableUtil.obj2Str(vos);
-                    dogs.setName(s);
-                    dogs.setAge(1);
-                    realm.commitTransaction();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                 Dog dogs = realm.createObject(Dog.class);
+                dogs.setName("小明");
+                dogs.setAge(1);
+                realm.commitTransaction();
                 break;
             case R.id.btn_delect:
                 Realm realm1 = Realm.getDefaultInstance();
@@ -119,25 +103,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Dog dog = all.get(i);
                     buffer.append(dog.getName() + "\n");
                     buffer.append(dog.getAge() + "\n");
-
-                    String name = dog.getName();
-                    List<SelectVideoFGVo> fgVo = new ArrayList<SelectVideoFGVo>();
-                    try {
-                        List<SelectVideoFGVo> list = SerializableUtil.string2List(name);
-                        if (list != null) {
-                            for (int l = 0; l < list.size(); l++) {
-                                SelectVideoFGVo vo = list.get(l);
-                                buffer.append("解析数据："+vo.getName()+vo.getId()+vo.getData());
-                            }
-                        }
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-
                 }
                 mTvData.setText(buffer.toString());
                 break;
+            case R.id.btn_startIntent:
+                startActivity(new Intent(MainActivity.this, Main2Activity.class));
+                break;
         }
     }
+
+
 }

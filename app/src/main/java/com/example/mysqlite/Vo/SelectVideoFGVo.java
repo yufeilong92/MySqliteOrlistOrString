@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @verdescript 版本号 修改时间  修改人 修改的概要说明
  * @Copyright: 2018
  */
-public class SelectVideoFGVo implements Serializable{
+public class SelectVideoFGVo  implements Serializable{
     private String data;
     private String name;
     private String id;
