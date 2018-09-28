@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="add"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_delect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="delectAll"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_updata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="updata"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_delect_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="delect_one"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_find"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="find"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/tv_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
