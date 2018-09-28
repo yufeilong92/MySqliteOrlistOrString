@@ -361,8 +361,8 @@ public class SaveUUidUtil {
                 break;
 ```
 
-![](https://github.com/yufeilong92/MySqliteOrlistOrString/icon/a.jpg)
-![](https://github.com/yufeilong92/MySqliteOrlistOrString/icon/b.jpg)
+![](https://github.com/yufeilong92/MySqliteOrlistOrString/blob/master/icon/a.jpg)
+![](https://github.com/yufeilong92/MySqliteOrlistOrString/blob/master/icon/b.jpg)
 
 *
 [详情使用点击](https://www.cnblogs.com/RaphetS/p/5996265.html)
